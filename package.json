@@ -1,0 +1,13 @@
+{
+  "name": "Login_custom_transition_placeholder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/TcharlesDaviLassen/Login_custom_place.git",
+  "author": "TcharlesDaviLassen <tcharlesdavilassen@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "5.2.3",
+    "install": "^0.13.0",
+    "sweetalert2": "^11.6.16"
+  }
+}

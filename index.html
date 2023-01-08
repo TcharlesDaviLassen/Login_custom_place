@@ -1,36 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <!-- <script  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script> -->
-        
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <script src="https://kit.fontawesome.com/94a61b71fb.js" crossorigin="anonymous"></script>
+    <!-- <script  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/94a61b71fb.js" crossorigin="anonymous"></script>
 
-        <title>Login_Custom</title>
-    </head>
+    <title>Login_Custom</title>
+</head>
 
-    <body>
-        <div class="inputBox">
-            <input type="text" required="required">
-            <span requiredMessage="Preenche">Username</span>
-        </div>
-
-        <div class="inputBox">
-            <input type="text" required="required">
-            <span>Password</span>
-        </div>
-
-        <div class="buttonEventOk">
-            <button>OK</button>
-
-        </div>
+<body>
 
 
-    </body>
+
+    <div class="inputBox">
+        <input id="user" type="text" minlength="3" required="required">
+        <span>
+            <i class="fa-solid fa-user"></i>
+            Username
+        </span>
+    </div>
+
+    <div class="inputBox">
+        <input id="password" type="password" minlength="6" maxlength="10" required="required">
+        <span>
+            <i class="fa-solid fa-lock"></i>
+            Password
+        </span>
+    </div>
+
+    <!-- <div class="inputBox">
+        <input id="confirm_password" type="password"  maxlength="10" required="required">
+        <span>Password</span>
+    </div> -->
+
+    <div class="buttonEventOk">
+        <button title="confirmar" type="submit" onClick="validarSenha()">OK</button>
+
+
+        <script>
+
+
+
+            async function validarSenha() {
+
+                let password = "";
+                let user = "";
+
+                user = document.getElementById('user').value;
+                password = document.getElementById("password").value
+
+                if (password != "" && password.length >= 6 && user.length >= 3) {
+                    await  Swal.fire({
+                            icon: 'success',
+                            title: `OK vamos lá ${user} `.toLocaleUpperCase(),
+                            text: 'Conectando...',
+                            // footer: '<a href="">Why do I have this issue?</a>'
+                        })
+                    window.location = '/doc.html'
+                } else {
+                    
+                    if (user.length < 3) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Usuário deve conter ao menos 3 caracteres!',
+                            // footer: '<a href="">Why do I have this issue?</a>'
+                        })
+                    } else if (password.length < 6) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Senha deve conter ao menos 6 caracteres!',
+                            // footer: '<a href="">Why do I have this issue?</a>'
+                        })
+                    }
+                }
+            }
+
+        </script>
+
+    </div>
+
+
+</body>
 
 </html>
