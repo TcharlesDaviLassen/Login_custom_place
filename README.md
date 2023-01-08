@@ -4,7 +4,7 @@ A pseudo-classe CSS :invalid representa qualquer elemento <input> ou <form> cujo
 
 /* Seleciona todos os inputs inválidos */
 
-```javascript
+```ruby
 input:invalid {
   background-color: pink;
 }
