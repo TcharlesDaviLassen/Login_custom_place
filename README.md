@@ -28,3 +28,20 @@ input:valid {
 
 Essa pseudo-classe é útil para realçar os campos válidos para o usuário.
 
+#
+
+### :required
+
+A pseudo-classe CSS :required representa qualquer <input>, <select>, ou <textarea> contendo o atributo required.
+
+/* Seleciona qualquer <input> requerido */
+
+```ruby
+input:required {
+  border: 1px dashed red;
+}
+```
+
+Esta pseudo-classe é utilizada para destacar campos que devem ter dados válidos antes do formulário ser submetido.
+
+### Esse é um atributo booleano usado para indicar que um determinando campo de formulário é obrigatório para o envio do mesmo. Ao adicionar esse atributo a um campo de formulário, o navegador obriga o usuário a inserir dados naquele campo antes de enviar o formulário.
