@@ -46,10 +46,4 @@ Esta pseudo-classe é utilizada para destacar campos que devem ter dados válido
 
 ### Esse é um atributo booleano usado para indicar que um determinando campo de formulário é obrigatório para o envio do mesmo. Ao adicionar esse atributo a um campo de formulário, o navegador obriga o usuário a inserir dados naquele campo antes de enviar o formulário.
 
-#
-#
-  
-(https://user-images.githubusercontent.com/66473846/211607862-5919057d-520f-4995-b9ad-1731d98e9095.webm)
-
-
 
